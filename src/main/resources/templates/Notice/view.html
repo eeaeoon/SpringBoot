@@ -1,0 +1,69 @@
+<html xmlns:th="https://thymeleaf.org">
+<script src="../static/css/jquery.min.js" th:src="@{/css/jquery.min.js}">
+
+</script>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/d9e27c7b71.js"></script>
+</head>
+
+<body>
+
+    <div class="py-5 row">
+        <div class="col-sm">
+            <h1 class="px-5">Home</h1>
+        </div>
+        <div class="col-sm">
+        </div>
+        <div class="col-sm"><a class="nav-link text-secondary" style="text-align: center" href="../home.html"
+                th:href="@{/home}">홈</a>
+        </div>
+    </div>
+
+    <ul class="p-2 nav bg-light">
+        <li class="nav-item pl-4">
+            <a class="nav-link text-secondary" href="./Notice/list.html" th:href="@{/Notice/list}">게시판</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-secondary" href="./Notice/edit.html" th:href="@{/Notice/edit}">수정</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-secondary" href="./Notice/delete.html" th:href="@{/Notice/delete}">삭제</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-secondary" href="./Notice/view.html" th:href="@{/Notice/view}">뷰</a>
+        </li>
+    </ul>
+
+
+
+    <div>
+        <div class="container">
+            <div class="container d-block text-center mt-3">
+                <div class="card" style="width: 40rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">제목 : 공지사항</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">공지사항</h6>
+                        <p class="card-text"></p> 첫번째 공지사항 입니다.</p> <a href="./Notice/edit.html"
+                            th:href="@{/Notice/edit}" class="card-link">수정</a>
+                        <a href="./Notice/delete.html" th:href="@{/Notice/delete}" class="card-link">삭제</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
