@@ -25,7 +25,8 @@ public class MemberController {
         Map<String, Object> resultMap = new HashMap<String, Object>();
         if ("read".equals(action)) {
             viewName = viewName + action;
-            resultMap = (Map<String, Object>) service.getObject(paramMap);
+            MemberService mService = new MemberService();
+            resultMap = (Map<String, Object>) mService.getObject(paramMap);
 
         }
         modelandView.addObject("resultMap", resultMap);
