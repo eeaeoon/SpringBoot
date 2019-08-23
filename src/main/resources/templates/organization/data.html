@@ -19,8 +19,22 @@
 </head>
 
 <body>
-    <h1>getObject</h1>
-    <table class="table">
+    <form th:action=@{/organization/data} class="col-6">
+        <div>
+            <input type="text" class="form-control" id="ORGANIZATION_SEQ" name="ORGANIZATION_SEQ"
+                placeholder="ORGANIZATION_SEQ">
+            <input type="text" class="form-control" id="NAME" name="NAME" placeholder="NAME">
+            <input type="text" class="form-control" id="TELEPHONE" name="TELEPHONE" placeholder="TELEPHONE">
+            <input type="text" class="form-control" id="ORDER_NUMBER" name="ORDER_NUMBER" placeholder="ORDER_NUMBER">
+            <input type="text" class="form-control" id="PARENT_ORGANIZATION_SEQ" name="PARENT_ORGANIZATION_SEQ"
+                placeholder="PARENT_ORGANIZATION_SEQ">
+        </div>
+        <div class="d-flex justify-content-end py-3">
+            <button type="submit" class="btn btn-primary w-25">insert</button>
+        </div>
+
+    </form>
+    <table class="table col-8">
         <thead>
             <tr>
                 <th>MEMBER_ID</th>
@@ -28,26 +42,11 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td th:text=${resultMap.MEMBER_ID}></td>
-                <td th:text=${resultMap.NAME}></td>
-            </tr>
-
-        </tbody>
-    </table>
-
-    <h1>getList</h1>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>MEMBER_ID</th>
-                <th>NAME</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr th:each="resultData: ${resultList}">
-                <td th:text=${resultData.MEMBER_ID}></td>
+            <tr th:each="resultData: ${resultMap}">
+                <td th:text=${resultData.ORGANIZATION_SEQ}></td>
                 <td th:text=${resultData.NAME}></td>
+                <td th:text=${resultData.TELEPHONE}></td>
+                <td th:text=${resultData.ORDER_NUMBER}></td>
             </tr>
 
         </tbody>

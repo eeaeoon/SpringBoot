@@ -1,13 +1,22 @@
 package com.example.springboot.controller;
 
 public class OrganizationBean {
-    String ORGANIZATION_SEQ;
+    String id;
+    String pw;
 
-    public String getORGANIZATION_SEQ() {
-        return ORGANIZATION_SEQ;
+    public String getid() {
+        return id;
     }
 
-    public void setORGANIZATION_SEQ(String ORGANIZATION_SEQ) {
+    public void setid(String id) {
+        this.id = id;
+    }
 
+    public String getpw() {
+        return pw;
+    }
+
+    public void setpw(String pw) {
+        this.pw = pw;
     }
 }

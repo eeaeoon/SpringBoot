@@ -19,40 +19,25 @@
 </head>
 
 <body>
-    <h1>getObject</h1>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>MEMBER_ID</th>
-                <th>NAME</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td th:text=${resultMap.MEMBER_ID}></td>
-                <td th:text=${resultMap.NAME}></td>
-            </tr>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>PASSPORTNUMBER</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="resultData: ${resultList}">
+                    <td th:text=${resultData.id}></td>
+                    <td th:text=${resultData.name}></td>
+                    <td th:text=${resultData.passportNumber}></td>
+                </tr>
 
-        </tbody>
-    </table>
-
-    <h1>getList</h1>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>MEMBER_ID</th>
-                <th>NAME</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr th:each="resultData: ${resultList}">
-                <td th:text=${resultData.MEMBER_ID}></td>
-                <td th:text=${resultData.NAME}></td>
-            </tr>
-
-        </tbody>
-    </table>
-
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>

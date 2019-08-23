@@ -19,7 +19,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping(value = "/member")
 public class MemberController {
     @Autowired
-    private MemberService service;
+    private MemberService service1;
     @Autowired
     private MemberService2 service2;
 
@@ -31,7 +31,7 @@ public class MemberController {
         List<Object> resultList = new ArrayList<Object>();
         if ("read".equals(action)) {
             viewName = viewName + action;
-            resultMap = (Map<String, Object>) service.getObject(paramMap);
+            resultMap = (Map<String, Object>) service1.getObject(paramMap);
             resultList = (List<Object>) service2.getList(paramMap);
         }
         modelandView.addObject("resultMap", resultMap);
